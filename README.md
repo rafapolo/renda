@@ -31,8 +31,6 @@ Usage: renda [arguments]
     -h, --help                       Show this help
 ```
 
-It was developed in between Athens and Lisbon over October-2017 - February-2018 to answer personal curiosities about the cryptomarkets, in the dream of a golden algorithm to provide a basic income.
-
 ---
 
 ### Samples
@@ -40,13 +38,14 @@ It was developed in between Athens and Lisbon over October-2017 - February-2018 
 -- show wallet
 ![arbitrage](doc/sample.png)
 
--- Detecting 2% price variation in 10 minutes, showing buy/sell book.
+-- Detecting 2% price variation in 10 minutes, showing buy/sell book opportunities.
 
 ![arbitrage](doc/arbitragem.png)
+-- Visual proof, using other online tool.
 ![arbitrage](doc/pump.jpeg)
 
--- Visual proof, using other online tool.
 
 ---
+It was developed in between Athens and Lisbon over October-2017 - February-2018 to answer personal curiosities about the cryptomarkets, in the dream of a golden algorithm to provide a basic income.
 
-Research & Development become inactive, despite promising strategies and enhancing patterns detection, in order of real-world job-based income.
+Solo Research & Development become inactive, despite promising strategies and enhancing patterns detection, in order of real-world job-based income.
