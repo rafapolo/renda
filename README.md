@@ -1,6 +1,6 @@
 ### Renda
 ---
-This software is written in [Crystal](https://crystal-lang.org/) programming language by [ExtraPolo!](https://extrapolo.com/), allowing it to be compiled as a binary, running *much faster* than tradition script languages like Python or Java. Detect price variation and make order could happen in 0.2 miliseconds.
+This software is written in [Crystal](https://crystal-lang.org/) programming language by [ExtraPolo!](http://extrapolo.com/), allowing it to be compiled as a binary, running *much faster* than tradition script languages like Python or Java. Detect price variation and make order could happen in 0.2 miliseconds.
 
 It basically conceptualizes and operates Wallets, Market Summaries, Coin Ticks, Orders, Markets, Brokers, Arbitrage and Strategies, mostly on Bittrex but also Cryptopia.
 
