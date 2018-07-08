@@ -11,7 +11,7 @@ Methods,
 - show history
 - pump detectors (ex: which coin values grows 5% in 5 minutes)
 - fake order/buy to simulate price evolution
-- detect arbitrage opportunities (price different in betwwen brokers)
+- detect arbitrage opportunities (price different in between brokers)
 - make order in dolar (ex: buy $50 of XRP)
 - log all activities
 
