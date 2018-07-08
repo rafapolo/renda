@@ -1,0 +1,8 @@
+name: shards
+version: 0.1.0
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  slang:
+    github: jeromegn/slang
