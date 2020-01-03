@@ -52,7 +52,7 @@ class Market
     begin
       # date_in_btc = JSON.parse(File.read("log/orders.json"))[currency][datetime.to_s].to_s.to_f64
       # result = date_in_btc * last_value_from("usdt-btc")
-      url = "/public?command=returnChartData&currencyPair=USDT_BTC&start=#{(datetime - 1.hour).epoch}&end=#{datetime.epoch}&period=86400"
+      url = "/public?command=returnChartData&currencyPair=USDT_BTC&start=#{(datetime - 1.hour).to_unix_ms}&end=#{datetime.to_unix_ms}&period=86400"
       client = HTTP::Client.new(URI.parse("https://poloniex.com"))
       Logger.log "-> #{url}"
       result = JSON.parse(client.get(url).body).first["weightedAverage"].to_s.to_f64.as(Float64)

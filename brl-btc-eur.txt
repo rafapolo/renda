@@ -1,0 +1,9 @@
+1000 BRL em BTC na brasilex
+	- 0.5% trade fee = 995 BRL
+	= 995 ÷ 27156.84 = 0.03663902 BTC
+	= 0.03663902 x 5650 = 207 EUR
+	= -1.5% fee = 203 EUR
+	= 944.23BRL
+	:(
+
+

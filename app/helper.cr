@@ -33,7 +33,7 @@ def percentage(x, y)
 end
 
 def as_time(time, tmz=false)
-  parsed_time = Time.parse(time.to_s, "%Ft%T.%L")
+  parsed_time = Time.parse!(time.to_s, "%Ft%T.%L")
   tmz ? parsed_time + TMZ : parsed_time
 end
 

@@ -9,9 +9,9 @@ class Strategy
       fastestes = ["xrp","nano","eos","steem","xlm","bits"]
       last_btc_in_usd = Market.last_value_from("usdt-btc")
 
-     loop do
+     #loop do
        sleep 1
-       
+
         cryptopia = get("https://www.cryptopia.co.nz", "/api/GetMarkets/BTC")
         bittrex = get("https://bittrex.com", "/api/v1.1/public/getmarketsummaries")
 
@@ -41,7 +41,7 @@ class Strategy
                 perc = percentage(last_b, last_c)
               end
 
-              if perc > 8 && perc < 100
+              if perc > 5 && perc < 100
                 count = total = 0
                 puts "=> #{market} | #{from}->#{to} | #{from_value}->#{to_value} | +#{perc}%".colorize(:yellow)# if hist[coin]>0 || hist[coin]!=perc
               #  hist[coin] = perc
@@ -50,22 +50,23 @@ class Strategy
                   qtd = h["Total"].to_s.to_f64
                   ago = as_time_ago(Time.parse(h["Timestamp"].to_s, "%s") - (Time.now + 2.hours))
                   puts "#{ago} | #{price} | #{percentage(from_value, price)}% | #{percentage(to_value, price)}% | $#{qtd*last_btc_in_usd}".colorize(h["Type"] == "Sell" ? :red : :green)
-                end
+                #end
                 line
-              #     if price > last_c
-              #       count += 1
-              #       qtd = buy["Total"].to_s.to_f64
-              #       puts "+#{percentage(last_c, price)}% | $#{qtd*last_btc_in_usd}"
-              #       total += qtd
-              #     end
-              #   end
-              #   puts total*last_btc_in_usd if total > 0
-              #   line
+                  if price > last_c
+                    count += 1
+                    qtd = h["Total"].to_s.to_f64
+                    puts "+#{percentage(last_c, price)}% | $#{qtd*last_btc_in_usd}"
+                    total += qtd
+                  end
+                end
+                puts total*last_btc_in_usd if total > 0
+                line
                end
+             end
             end
 
-          end
-        end
+          #end
+      #  end
       end
 
       #puts "#{bigger} #{market} +#{perc} | #{cryptopia} / #{bittrex}".colorize(:green) if perc > 10 && perc < 200 && bigger=="cryptopia"

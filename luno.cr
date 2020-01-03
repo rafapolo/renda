@@ -1,7 +1,6 @@
 require "colorize"
 
-# is sell it in BRL profitable bringing back to EUR?
-# no!
+# is sell it in BRL profitable bringing back to EUR? no!
 
 def profit!(invest)
   # euro_to_exchange | n26 -> luno

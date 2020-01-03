@@ -29,7 +29,7 @@ class Broker
 
     # sign non-public requests
     unless method.starts_with?("public")
-      url += "?apikey=#{KEY}&nonce=#{start_time.epoch_ms}&#{params}"
+      url += "?apikey=#{KEY}&nonce=#{start_time.to_unix_ms}&#{params}"
       apisign = OpenSSL::HMAC.hexdigest(:sha512, PVT, url)
       headers = HTTP::Headers{"apisign" => apisign}
     else
